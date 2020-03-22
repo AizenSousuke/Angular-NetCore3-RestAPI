@@ -25,8 +25,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
+        pwd
         cd ClientApp
-    - run: npm ci
+        pwd
+        ls -l
+    - run: npm install
     - run: npm run build --if-present
     - run: npm test
       env:
